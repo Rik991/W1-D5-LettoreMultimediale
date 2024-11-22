@@ -33,4 +33,9 @@ public class Immagine extends ElementoMultimediale implements ILuminosita{
         System.out.println(getTitolo() + asterisco);
     }
 
+    @Override
+    public void esegui() {
+        show();
+    }
+
 }

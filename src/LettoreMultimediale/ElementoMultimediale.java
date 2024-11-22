@@ -13,6 +13,11 @@ public class ElementoMultimediale {
 
     public ElementoMultimediale(String titolo) {
         this.titolo = titolo;
-
     }
+
+    public void esegui(){
+
+    };
+
+
 }

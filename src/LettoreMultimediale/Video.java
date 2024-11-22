@@ -1,13 +1,15 @@
 package LettoreMultimediale;
 
 public class Video extends ElementoMultimediale implements IRiproducibile, ILuminosita {
+    private int durata;
     private int volume;
     private int luminosita;
 
-    public Video(String titolo) {
+    public Video(String titolo, int durata) {
         super(titolo);
         this.volume = 5;  //setto il volume standard a livello 5 (metà)
         this.luminosita = 5;  //setto la luminosita standard a livello 5 (metà)
+        this.durata = durata;
     }
 
     @Override
@@ -59,6 +61,12 @@ public class Video extends ElementoMultimediale implements IRiproducibile, ILumi
         System.out.println(getTitolo() + esclamativo + asterisco);
     }
 
+    @Override
+    public void esegui() {
+        for (int i = 0; i < durata; i++) {
+            play();
+        }
 
 
+    }
 }

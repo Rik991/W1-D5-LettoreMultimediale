@@ -3,10 +3,12 @@ package LettoreMultimediale;
 public class Audio extends ElementoMultimediale implements IRiproducibile{
 
     private int volume;
+    private int durata;
 
-    public Audio(String titolo) {
+    public Audio(String titolo, int durata) {
         super(titolo);
         this.volume = 5;  //setto il volume standard a livello 5 (metà)
+        this.durata = durata;
     }
 
     @Override
@@ -37,4 +39,10 @@ public class Audio extends ElementoMultimediale implements IRiproducibile{
             System.out.println(getTitolo() + esclamativo);
     }
 
+    @Override
+    public void esegui() {
+        for (int i = 0; i < durata; i++) {
+            play();
+        }
+    }
 }
