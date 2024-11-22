@@ -19,7 +19,7 @@ public class Main {
             System.out.println("Elemento " + (i + 1));
             System.out.println("Inserisci il tipo: -1-Immagine; -2-Audio; -3-Video");
             int tipo = scanner.nextInt(); //memorizzo il tipo scelto dall'utente
-            scanner.nextLine();
+            scanner.nextLine();//svuoto lo scanner per evitare bug
             switch (tipo) {
                 case 1:
                 case 2:
@@ -56,7 +56,7 @@ public class Main {
 
         //ciclo l'array di elementi e permetto di riprodurli (con metodi volume e luminosità annessi) finchè l'utente non preme lo 0
         while (true) {
-            System.out.println("inserisci un numero da 1 a 5 per riprodurre un elemento multimediale, 0 per stoppare il programma!");
+            System.out.println("inserisci un numero da 1 a 5 per riprodurre un elemento multimediale, 0 per stoppare il programma! Luminosità e volume sono di default a 5 ma potrai settarli dopo la scelta!");
             int sceltaUtente = scanner.nextInt();
             if (sceltaUtente > 5 || sceltaUtente < 0) {
                 System.out.println("Elemento Multimediale non trovato!");
@@ -109,7 +109,7 @@ public class Main {
 
 
         }
-
+        scanner.close();
 
     }
 }
